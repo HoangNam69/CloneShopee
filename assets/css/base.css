@@ -1,0 +1,43 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: inherit;
+    /*Kế thừa lại*/
+}
+
+html {
+    /* 
+        Mặc định của trình duyệt là 16px 
+            Lấy 62.5% tương ứng với 10px dễ hàng cho việc tùy chọn kích thước style hơn
+    */
+    font-size: 62.5%;
+    /* Đặt chiều cao phổ biến cho các dòng chữ trong toàn bộ website */
+    list-style: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Chuẩn bị trước cho responsive */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Trường hợp muốn độ rộng của phần tử 100% */
+.grid__full-width {
+    width: 100%;
+}
+
+/* 
+    Row cho phép các phần tử là con trực tiếp nằm cùng trên một hàng ngang
+    Tổng độ rộng phần tử con đó vượt quá độ rộng thì sẽ cho phần tử con xuống hàng
+ */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
