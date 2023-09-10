@@ -1,24 +1,54 @@
-.app {
+.app {}
 
-}
-
+/* Header */
 .header {
-    
+    height: 120px;
+    background: linear-gradient(to bottom, #f53e2d, #fe6432);
 }
 
+/* Header - navbar */
 .header__navbar {
-    
+    display: flex;
+    justify-content: space-between;
 }
 
 .header__navbar-list {
-    
+    /* margin: 0; */
+    padding-left: 0;
+    list-style: none;
 }
 
 .header__navbar-item {
-    
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+}
+
+.header__navbar-item-link,
+.header__navbar-item {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    font-weight: 300;
 }
 
 .header__navbar-item-link {
- 
-    
+    text-decoration: none;
+}
+
+/* Class modify - font weight */
+.header__navbar-item-link--bold {
+    font-weight: 400;
+}
+
+/* Class modify - Thêm dấu gạch bên phải (separate: phân cách)*/
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1.6rem;
+    background: var(--white-color);
+    right: -0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
 }

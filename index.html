@@ -19,26 +19,32 @@
 <body>
     <div class="app">
         <header class="header">
-            <nav class="header__navbar">
-                <ul class="header__navbar-list">
-                    <li class="header__navbar-item">Vào của hàng trên ứng dụng TickID</li>
-                    <li class="header__navbar-item">Kết nối</li>
-                </ul>
-                <ul class="header__navbar-list">
-                    <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link">Thông báo</a>
-                    </li>
-                    <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link">Trợ giúp</a>
-                    </li>
-                    <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link">Đăng ký</a>
-                    </li>
-                    <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link">Đăng nhập</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="grid">
+                <!-- Thêm class grid vào để xử lý vấn đề  khoảng cách bên trái và bên phải của nav -->
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--separate">Vào của hàng trên ứng dụng TickID
+                        </li>
+                        <li class="header__navbar-item">Kết nối</li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="#" class="header__navbar-item-link">Thông báo</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="#" class="header__navbar-item-link">Trợ giúp</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="#"
+                                class="header__navbar-item-link header__navbar-item-link--bold header__navbar-item--separate">Đăng
+                                ký</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="#" class="header__navbar-item-link header__navbar-item-link--bold">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main class="container"></main>
         <footer class="footer"></footer>
