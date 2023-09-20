@@ -16,6 +16,7 @@
     /* margin: 0; */
     padding-left: 0;
     list-style: none;
+    margin-top: 4px;
 }
 
 .header__navbar-item {
@@ -31,7 +32,18 @@
     font-weight: 300;
 }
 
+.header__navbar-item-link:hover,
+.header__navbar-item:hover {
+    color: rgba(255, 255, 255, .7);
+    cursor: pointer;
+}
+
 .header__navbar-item-link {
+    text-decoration: none;
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
     text-decoration: none;
 }
 
