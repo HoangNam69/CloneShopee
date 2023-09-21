@@ -23,6 +23,7 @@
     display: inline-block;
     margin: 0 8px;
     position: relative;
+    min-height: 2rem;
 }
 
 .header__navbar-item-link,
@@ -30,6 +31,13 @@
     font-size: 1.4rem;
     color: var(--white-color);
     font-weight: 300;
+}
+
+.header__navbar-icon-link,
+.header__navbar-item-link,
+.header__navbar-item {
+    display: inline-flex;
+    align-items: center;
 }
 
 .header__navbar-item-link:hover,
@@ -45,6 +53,11 @@
 .header__navbar-icon-link {
     color: var(--white-color);
     text-decoration: none;
+}
+
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 4px
 }
 
 /* Class modify - font weight */
@@ -63,4 +76,9 @@
     right: -0.9rem;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.header__navbar-item--no-pointer {
+    cursor: text;
+    color: var(--white-color);
 }
