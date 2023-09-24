@@ -24,6 +24,7 @@
     margin: 0 8px;
     position: relative;
     min-height: 2rem;
+    position: relative;
 }
 
 .header__navbar-item-link,
@@ -44,6 +45,10 @@
 .header__navbar-item:hover {
     color: rgba(255, 255, 255, .7);
     cursor: pointer;
+}
+
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
 }
 
 .header__navbar-item-link {
@@ -82,3 +87,41 @@
     cursor: text;
     color: var(--white-color);
 }
+
+/* Header QR code download app*/
+.header__qr {
+    width: 18.6rem;
+    background: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 118%; /*Là 100% chiều cao của phần tử chứa header__qr*/
+    border-radius: 2px;
+    padding: 8px;
+    display: none;
+    animation: fadeIn ease-in .25s;
+}
+
+/* Xử lý mất cầu nối hover hiển thị code */
+.header__qr::after {
+    content: "";
+    position: absolute;
+    top: -1rem; /*Dịch lên là cầu nối*/
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    height: 1.4rem;
+    justify-content: space-between;
+    padding: 0 11px;
+}
+
+/* .header__qr-download-img + .header__qr-download-img {
+    margin-left: 10px;
+} */
