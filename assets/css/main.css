@@ -94,7 +94,8 @@
     background: var(--white-color);
     position: absolute;
     left: 0;
-    top: 118%; /*Là 100% chiều cao của phần tử chứa header__qr*/
+    top: 118%;
+    /*Là 100% chiều cao của phần tử chứa header__qr*/
     border-radius: 2px;
     padding: 8px;
     display: none;
@@ -105,7 +106,8 @@
 .header__qr::after {
     content: "";
     position: absolute;
-    top: -1rem; /*Dịch lên là cầu nối*/
+    top: -1rem;
+    /*Dịch lên là cầu nối*/
     left: 0;
     width: 100%;
     height: 10px;
@@ -125,3 +127,84 @@
 /* .header__qr-download-img + .header__qr-download-img {
     margin-left: 10px;
 } */
+
+/* Header notification */
+.header__notify {
+    position: absolute;
+    width: 404px;
+    top: 118%;
+    right: 0;
+    background-color: var(--white-color);
+    border: 1px solid var(--boder-color-notify);
+}
+
+.header__notify-header {
+    height: 40px;
+}
+
+.header__notify-header h3 {
+    margin: 0 0 0 12px;
+    color: var(--text-color-header-notify);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.header__notify-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.header__notify-item {
+    display: flex;
+}
+
+.header__notify-item:hover {
+    background: var(--notify-item-hover);
+}
+
+.header__notify-link {
+    display: flex;
+    text-decoration: none;
+    padding: 12px;
+}
+
+/* Notification chưa đọc */
+.header__notify-item--new {
+    background: var(--notify);
+}
+
+.header__notify-img {
+    width: 48px;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-description,
+.header__notify-name {
+    margin: 0;
+}
+
+.header__notify-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.header__notify-description {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.6rem;
+}
+
+.header__notify-footer {
+    text-align: center;
+}
+.header__notify-footer-btn {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: var(--text-color);
+}
