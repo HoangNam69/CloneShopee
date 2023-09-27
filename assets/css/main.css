@@ -17,6 +17,8 @@
     padding-left: 0;
     list-style: none;
     margin-top: 4px;
+    display: flex;
+    align-items: center;
 }
 
 .header__navbar-item {
@@ -47,6 +49,7 @@
     cursor: pointer;
 }
 
+.header__navbar-item--has-notify:hover .header__notify,
 .header__navbar-item--has-qr:hover .header__qr {
     display: block;
 }
@@ -136,10 +139,29 @@
     right: 0;
     background-color: var(--white-color);
     border: 1px solid var(--boder-color-notify);
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    /* transform-origin:để chỉ định góc bắt đầu hiển thị */
+    animation: headerNotifyGrowth ease-in 0.2s;
+    display: none;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .header__notify-header {
     height: 40px;
+    user-select: none;
+    /*Không cho người dùng copy*/
 }
 
 .header__notify-header h3 {
@@ -190,7 +212,8 @@
 .header__notify-name {
     font-size: 1.4rem;
     font-weight: 500;
-    color: var(--black-color);
+    color: var(--text-color);
+    line-height: 1.8rem;
 }
 
 .header__notify-description {
@@ -199,12 +222,16 @@
     line-height: 1.6rem;
 }
 
-.header__notify-footer {
-    text-align: center;
-}
+.header__notify-footer {}
+
 .header__notify-footer-btn {
+    width: 100%;
     display: block;
-    padding: 10px 16px;
+    padding: 10px 0;
     text-decoration: none;
     color: var(--text-color);
+    margin: auto;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
 }
