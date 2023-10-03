@@ -12,6 +12,10 @@
     --btn-hover: rgba(0, 0, 0, 0.05);
     --bg-color-auth-form-social: #f5f5f5;
     --color-logo-facebook: #3a5a98;
+    /* Xử lý chiều cao của header-with-search */
+    --header-height: 120px;
+    --navbar-height: 36px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {

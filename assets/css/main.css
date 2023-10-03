@@ -2,7 +2,7 @@
 
 /* Header */
 .header {
-    height: 120px;
+    height: var(--header-height);
     background: linear-gradient(to bottom, #f53e2d, #fe6432);
 }
 
@@ -386,4 +386,39 @@
 
 .auth-form__social-icon--google {
     background: var(--white-color);
+}
+
+
+/* Header with search */
+.header-with-search {
+    height: var(--header-with-search-height);
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 200px;
+}
+
+.header__logo-img {
+    width: 150px;
+}
+
+.header__search {
+    height: 40px;
+    background: var(--white-color);
+    flex: 1;
+    border-radius: 2px;
+}
+
+.header__cart {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__cart-icon {
+    font-size: 2.8rem;
+    color: var(--white-color);
 }
