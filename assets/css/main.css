@@ -413,15 +413,35 @@
     align-items: center;
 }
 
-.header__search-input {
+.header__search-input-wrap {
     flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+/* .header__search-input-wrap::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 10px;
+    background: var(--color-logo-facebook);
+    top: 100%;
+    left: 0;
+} */
+
+.header__search-input {
+    width: 100%;
     height: 100%;
     border: none;
     outline: none;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     padding: 0 16px;
     border-radius: 2px;
+}
+
+.header__search-input:focus~.header__search-history {
+    display: block;
 }
 
 .header__search-select {
@@ -469,7 +489,7 @@
     width: 140px;
     background: var(--white-color);
     padding-left: 0;
-    border-radius: 3px;
+    border-radius: 2px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     animation: fadeIn linear .25s;
 }
@@ -477,7 +497,7 @@
 .header__search-option-item {
     width: 100%;
     padding: 8px;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .header__search-option-item:hover {
@@ -507,7 +527,7 @@
     border: none;
     width: 60px;
     height: 34px;
-    border-radius: 3px;
+    border-radius: 2px;
     margin-right: 3px;
     outline: none;
 }
@@ -522,8 +542,6 @@
     color: var(--white-color);
 }
 
-
-
 .header__cart {
     width: 150px;
     display: flex;
@@ -534,4 +552,45 @@
 .header__cart-icon {
     font-size: 2.8rem;
     color: var(--white-color);
+}
+
+/* Search history */
+.header__search-history {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: calc(100% - 32px);
+    background: var(--white-color);
+    border-radius: 2px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+}
+
+.header__search-history-heading {
+    margin: 8px 16px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--btn-disable);
+}
+
+.header__search-history-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.header__search-history-item {
+    height: 38px;
+    padding-left: 16px;
+}
+
+.header__search-history-item:hover {
+    background: var(--notify-item-hover);
+}
+
+.header__search-history-item a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    line-height: 38px;
 }
